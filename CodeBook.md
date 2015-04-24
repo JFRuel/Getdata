@@ -1,4 +1,4 @@
-This file provdes a description of the input data, the transformations, and output data for the _Getting and Cleaning Data_ from Coursera
+This file provides a description of the input data, the transformations, and output data for the _Getting and Cleaning Data_ course from Coursera
 
 ================================================
 ## SOURCE DATA SET
