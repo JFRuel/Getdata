@@ -5,7 +5,7 @@ Course Project  - April 2015
 JFRuel on GitHub
 ==================================================================
 
-This document explains how all the R script works and how it is connected to the input and output files.  
+This document explains how all the R script works, what it does, and how it is connected to the input and output files.  
 
 To be able to run the R file, you will need to download the source datasets using the following URL:
 "Human Activity Recognition Using Smartphones Data Set".
@@ -27,21 +27,39 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 - 'test/y_test.txt': Test labels.
 - 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 
-## Running the code
-====================
+## How to run the code
+=======================
 
 The R code was built and tested using 
 	- R version 3.1.3 (2015-03-09) -- "Smooth Sidewalk"
 	- Platform: i386-w64-mingw32/i386 (32-bit)
 	- dplyr package version 0.4.1
 
-The "run_analysis.R" must be run from the working directory.
+The "run_analysis.R" file must be run from the working directory.
 
-The "UCI HAR" (see above) must be extracted in the working directory.
+The "UCI HAR" dataset (see above) must be extracted in the working directory.
 
 The R code will use all of the above ".txt" files as input (including subfolders as describe above).
 
-The output dataset will be created in the working directory, as "Mean_by_subject_and_activity.txt"
+The output dataset will be created in the working directory, and called "Mean_by_subject_and_activity.txt"
+
+## What does the run_analysis.R file do?
+===========================================
+
+Using the input data provided by the "Human Activity Recognition Using Smartphones Data Set" (see first section above), the R code creates a tidy dataset called "Mean_by_subject_and_activity.txt"
+
+This dataset provides the **mean** of all the standard deviation and mean variables from the source dataset **grouped by subject, and by activity**.
+
+The dataset adheres to the tidy data princinples.  Namely:
+
+- Each variable measured is in one column
+- Each different observation of that variable is in a different row
+- There is one table for each "kind" of variable (in this case, there is only 1 output table)
+
+Also, all variables have headings that are "human readable and free of invalid characters. 
+Finaly, there are no duplicate columns
+
+**A detailed description of the transformations made to the data can be found in the CodeBook.md file**
 
 ## License:
 ============
