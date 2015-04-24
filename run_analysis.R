@@ -5,7 +5,7 @@
         library(dplyr)
   
 ## Reads the files in data frames that can be used by dplyr
-        Number_rows <- 20000  # for testing purposes, can be set to a small number
+        Number_rows <- 20000  # for testing purposes only, can be set to a small number
   
         X_train <- tbl_df(read.table("train/X_train.txt", nrow=Number_rows))
         Y_train <- tbl_df(read.table("train/Y_train.txt", nrow=Number_rows))
