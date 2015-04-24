@@ -31,14 +31,16 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 ====================
 
 The R code was built and tested using 
-	R version 3.1.3 (2015-03-09) -- "Smooth Sidewalk"
-	Platform: i386-w64-mingw32/i386 (32-bit)
-	dplyr package version 0.4.1
+	- R version 3.1.3 (2015-03-09) -- "Smooth Sidewalk"
+	- Platform: i386-w64-mingw32/i386 (32-bit)
+	- dplyr package version 0.4.1
 
 The "run_analysis.R" must be run from the working directory.
+
 The "UCI HAR" (see above) must be extracted in the working directory.
 
 The R code will use all of the above ".txt" files as input (including subfolders as describe above).
+
 The output dataset will be created in the working directory, as "Mean_by_subject_and_activity.txt"
 
 ## License:
