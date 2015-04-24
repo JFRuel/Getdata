@@ -15,8 +15,8 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 ## The folder should include the following files:
 =================================================
 
-- 'README.MD' : Description of steps and setup required for running the R code
-- 'CodeBook.MD' : Description of the input data, the transformations, and output data
+- 'README.md' : Description of steps and setup required for running the R code
+- 'CodeBook.md' : Description of the input data, the transformations, and output data
 - 'run_analysis.R' : R code used to create the output dataset
 - 'features_info.txt': Shows information about the variables used on the feature vector.
 - 'features.txt': List of all features.
