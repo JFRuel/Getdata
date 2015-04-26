@@ -60,6 +60,7 @@ Also, all variables have headings that are "human readable and free of invalid c
 Finaly, there are no duplicate columns
 
 **A detailed description of the transformations made to the data can be found in the CodeBook.md file**
+_Note for peer reviewers: There are numerous threads discussing where the details of the data transformation should reside (Readme or CodeBook), with no concensus -- For this project, the details of data transformation are captured in the CodeBook.md file, in the "Study Design" section._ 
 
 ## License:
 ============
