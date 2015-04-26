@@ -17,27 +17,28 @@ A full description is available at the site where the data was obtained: http://
 
 The following transformations were done on the dataset to obtain the output (tidy) dataset:
 
-1. Merged the training and the test sets to create one data set.
+#### 1. Merged the training and the test sets to create one data set.
 
 	Created a single data set by merging the three (3) files in test folder and the three (3) files in the train folder. 
 	The Inertial Signals data was not used in creating the output data file
 
 
 
-2. Extracted only the measurements on the mean and standard deviation for each measurement.
+#### 2. Extracted only the measurements on the mean and standard deviation for each measurement.
 	Select columns with names that include the strings "mean" or "std", and discarded the other quantitative variables.
+  	Also removed from the file are the columns with the word "mean" that are not avg of source measures,
+        for example "meanFreq" and the additional vectors calculated on the derived angle variable
 
-
-3. Used descriptive activity names to name the activities in the data set
+#### 3. Used descriptive activity names to name the activities in the data set
 
 	Applied the names provided in "activity_labels.txt", to replace the numeric values provided in the "Y_*.txt" datasets.
 
 
 
-4. Appropriately labeled the data set with descriptive variable names. 
+#### 4. Appropriately labeled the data set with descriptive variable names. 
 	Applied the column names provided in "features.txt" to the "X_*txt" datasets variables.
 
-5. From the data set in step 4, created a second, independent tidy data set with the average of each variable for each activity and each subject.
+#### 5. From the data set in step 4, created a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 	Calculated the "means" of columns in the merged data of each variable for each activity performed by each subject. 
 
@@ -64,6 +65,8 @@ Descriptive variables:
 , STANDING, LAYING.
 
 Quantitative variables:
+
+- All of the measures listed below are normalized and bounded within [-1,1]
 
 - tBodyAcc.mean...X                   : num  0.222 0.261 0.279 0.277 0.289 ...
 - tBodyAcc.mean...Y                   : num  -0.04051 -0.00131 -0.01614 -0.01738 -0.00992 ...
@@ -152,4 +155,3 @@ Quantitative variables:
 - fBodyBodyGyroMag.std..              : num  -0.824 -0.932 -0.978 -0.321 -0.398 ...
 - fBodyBodyGyroJerkMag.std..          : num  -0.933 -0.987 -0.995 -0.382 -0.392 ...
 
-- Features are normalized and bounded within [-1,1].
