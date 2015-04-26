@@ -57,15 +57,9 @@
         valid_column_names <- make.names(names=names(DF_complete), unique=TRUE, allow_ = TRUE)
         names(DF_complete) <- valid_column_names
         
-        ## Second we keep only the 86 measurement columns + subject + activity columns
+        ## Now we keep only the 86 measurement columns + subject + activity columns
         DF_mean_std <- select(DF_complete, matches("subject"),matches("activity_label"),contains("mean"),contains("std"))
   
-        ## Finally, we remonve the columns with the word "mean" that are not avg of source measures
-        ## for example "meanFreq" and the additional vectors calculated on the derived angle variable
-        DF_mean_std <- select(DF_mean_std, -contains("meanFreq"))
-        DF_mean_std <- select(DF_mean_std, -contains("angle"))
-        
-        
 ## Creates a second, independent tidy data set with the average of 
 ## each variable for each activity and each subject
         DF_mean_std <- group_by(DF_mean_std,subject,activity_label)
